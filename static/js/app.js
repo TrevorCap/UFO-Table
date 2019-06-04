@@ -1,11 +1,12 @@
 // from data.js
-var body = d3.select('tbody')
+var tbody = d3.select('tbody')
 // YOUR CODE HERE!
-var buttons = d3.select('filter-btn')
+var buttons = d3.select('#filter-btn')
 
 buttons.on("click", function() {
     d3.event.preventDefault();
-    var inputElement = d3.select("datetime");
+    console.log("YAYAYAYAYAYYAYA");
+    var inputElement = d3.select("#datetime");
     var inputValue = inputElement.property("value");
     var newData = data.filter(line => line.datetime === inputValue);
     newData.forEach(function (line) {
